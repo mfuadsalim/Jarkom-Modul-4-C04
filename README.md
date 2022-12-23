@@ -37,3 +37,256 @@ Pada VLSM ini diturunkan sesuai dengan netmask atasnya sehingga ketika /20 akan 
 ## Pembagian IP 
 Kemudian kita bagi dengan tetap menggunakan IP perfix `192.181` . hasil pembagian seperti berikut :
 ![ip](https://user-images.githubusercontent.com/80630201/204081753-7b77d442-d340-41bb-9d76-2cd94aaf6246.jpg)
+
+#### Mengatur _Network Configuration_ masing-masing interface pada setiap perangkat
+
+##### Router
+Atur IP pada interface setiap router dan set Port status menjadi **On**
+
+- **The Resonance**
+  - FastEthernet0/1
+  ```
+  IPv4 Address 192.181.11.201
+  Subnet Mask 255.255.255.252
+  ```
+  - Ethernet1/0
+  ```
+  IPv4 Address 192.181.11.209
+  Subnet Mask 255.255.255.252
+  ```
+  - Ethernet1/1
+  ```
+  IPv4 Address 192.181.11.213
+  Subnet Mask 255.255.255.252
+  ```
+  - Ethernet1/2
+  ```
+  IPv4 Address 192.181.11.205
+  Subnet Mask 255.255.255.252
+  ```
+- **The Magical**
+  - FastEthernet0/0
+  ```
+  IPv4 Address 192.181.11.210
+  Subnet Mask 255.255.255.252
+  ```
+  - FastEthernet0/1
+  ```
+  IPv4 Address 192.181.0.1
+  Subnet Mask 255.255.254.0
+  ```
+- **The Order**
+  - FastEthernet0/0
+  ```
+  IPv4 Address 192.181.11.202
+  Subnet Mask 255.255.255.252
+  ```
+  - FastEthernet0/1
+  ```
+  IPv4 Address 192.181.11.197
+  Subnet Mask 255.255.255.252
+  ```
+  - FastEthernet1/0
+  ```
+  IPv4 Address 192.181.11.129
+  Subnet Mask 255.255.255.192
+  ```
+- **The Minister**
+  - FastEthernet0/0
+  ```
+  IPv4 Address 192.181.11.198
+  Subnet Mask 255.255.255.252
+  ```
+  - FastEthernet0/1
+  ```
+  IPv4 Address 192.181.4.1
+  Subnet Mask 255.255.252.0
+  ```
+  - FastEthernet1/0
+  ```
+  IPv4 Address 192.181.11.193
+  Subnet Mask 255.255.255.252
+  ```
+- **The Dauntless**
+  - FastEthernet0/0
+  ```
+  IPv4 Address 192.181.11.194
+  Subnet Mask 255.255.255.252
+  ```
+  - FastEthernet0/1
+  ```
+  IPv4 Address 192.181.8.1
+  Subnet Mask 255.255.255.0
+  ```
+- **The Instrument**
+  - FastEthernet0/0
+  ```
+  IPv4 Address 192.181.10.1
+  Subnet Mask 255.255.255.128
+  ```
+  - FastEthernet0/1
+  ```
+  IPv4 Address 192.181.11.214
+  Subnet Mask 255.255.255.252
+  ```
+  - FastEthernet1/0
+  ```
+  IPv4 Address 192.181.11.221
+  Subnet Mask 255.255.255.252
+  ```
+  - FastEthernet1/1
+  ```
+  IPv4 Address 192.181.11.217
+  Subnet Mask 255.255.255.252
+  ```
+- **The Profound**
+  - FastEthernet0/0
+  ```
+  IPv4 Address 192.181.11.218
+  Subnet Mask 255.255.255.252
+  ```
+  - FastEthernet0/1
+  ```
+  IPv4 Address 192.181.10.129
+  Subnet Mask 255.255.255.128
+  ```
+  - FastEthernet1/0
+  ```
+  IPv4 Address 192.181.11.1
+  Subnet Mask 255.255.255.128
+  ```
+- **The Firefist**
+  - FastEthernet0/0
+  ```
+  IPv4 Address 192.181.11.222
+  Subnet Mask 255.255.255.252
+  ```
+  - FastEthernet0/1
+  ```
+  IPv4 Address 192.181.9.1
+  Subnet Mask 255.255.255.0
+  ```
+  - FastEthernet1/0
+  ```
+  IPv4 Address 192.181.2.1
+  Subnet Mask 255.255.254.0
+  ```
+- **The Queen**
+  - FastEthernet0/0
+  ```
+  IPv4 Address 192.181.11.225
+  Subnet Mask 255.255.255.252
+  ```
+  - FastEthernet0/1
+  ```
+  IPv4 Address 192.181.9.2
+  Subnet Mask 255.255.255.0
+  ```
+
+##### Client
+
+- **Johan (100 Host)**
+
+```
+IPv4 Address 192.181.8.3
+Subnet Mask 255.255.255.0
+Default Gateway 192.181.8.1
+```
+
+- **Phanora (150 Host)**
+
+```
+IPv4 Address 192.181.8.2
+Subnet Mask 255.255.255.0
+Default Gateway 192.181.8.1
+```
+
+- **Guideau (1000 Host)**
+
+```
+IPv4 Address 192.181.4.2
+Subnet Mask 255.255.252.0
+Default Gateway 192.181.4.1
+```
+
+- **Ashaf (50 Host)**
+
+```
+IPv4 Address 192.181.11.130
+Subnet Mask 255.255.252.192
+Default Gateway 192.181.11.129
+```
+
+- **Haines (70 Host)**
+
+```
+IPv4 Address 192.181.0.2
+Subnet Mask 255.255.254.0
+Default Gateway 192.181.0.1
+```
+
+- **Corvekt (200 Host)**
+
+```
+IPv4 Address 192.181.0.3
+Subnet Mask 255.255.254.0
+Default Gateway 192.181.0.1
+```
+
+- **Matt Cugat (120 Host)**
+
+```
+IPv4 Address 192.181.10.2
+Subnet Mask 255.255.255.128
+Default Gateway 192.181.10.1
+```
+
+- **Spendrow (120 Host)**
+
+```
+IPv4 Address 192.181.10.130
+Subnet Mask 255.255.255.128
+Default Gateway 192.181.10.129
+```
+
+- **Helga (70 Host)**
+
+```
+IPv4 Address 192.181.11.2
+Subnet Mask 255.255.255.128
+Default Gateway 192.181.11.1
+```
+
+- **Oakleave (500 Host)**
+
+```
+IPv4 Address 192.181.2.2
+Subnet Mask 255.255.254.0
+Default Gateway 192.181.2.1
+```
+
+- **Keith (210 Host)**
+
+```
+IPv4 Address 192.181.9.3
+Subnet Mask 255.255.255.0
+Default Gateway 192.181.9.1
+```
+
+##### Server
+
+- **The Beast**
+
+```
+IPv4 Address 192.181.11.206
+Subnet Mask 255.255.255.252
+Default Gateway 192.181.11.205
+```
+
+- **The Witch**
+
+```
+IPv4 Address 192.181.11.226
+Subnet Mask 255.255.255.252
+Default Gateway 192.181.11.225
+```
